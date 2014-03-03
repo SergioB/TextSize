@@ -18,24 +18,26 @@ class MenuState extends FlxState
 	override public function create():Void
 	{
 		super.create();
-        var firstText = new FlxText(40, 40, 140, "-");
+        var firstText = new FlxText(140, 40, 140, "-");
         firstText.wordWrap = false;
       	firstText.setFormat("assets/fonts/DejaVuSerif.ttf", 28,0xAAAAAA);
         firstText.text = "TTTtttTTT";
+        firstText.drawFrame();
         trace('first height =${firstText.height}');
-        firstText.setGraphicSize(0, 15);
+        firstText.setGraphicSize(0, 37);
         firstText.updateHitbox();
         add(firstText);
+
         //
         // Second bigger text:
         //
-        var secondText = new FlxText(40, 80, 140, "-");
+        var secondText = new FlxText(140, 80, 240, "-");
         secondText.wordWrap = false;
-        secondText.setFormat("assets/fonts/DejaVuSerif.ttf", 156,0xAAAAAA);
+        secondText.setFormat("assets/fonts/DejaVuSerif.ttf", 56,0xAAAAAA);
         secondText.text = "TTTtttTTT";
-        secondText.updateHitbox();
+        secondText.drawFrame();
         trace('second height =${secondText.height}');
-        secondText.setGraphicSize(0, 15);
+        secondText.setGraphicSize(0, 37);
         secondText.updateHitbox();
         add(secondText);
 	}
